@@ -24,7 +24,7 @@ def main():
         )
     st.sidebar.image("images/si_logo.png")
     st.title('Target Sheet Classifier')
-    st.sidebar.write("This app is run via Streamlit. It is designed for those at the United States Holocaust Memorial Museum. It hosts a binary classification model which is meant to identify target sheets in microfilms. Special thanks to Mike Trizna at the Smithsonian Institution's Data Science Lab for helping me get this app in working order. And special thanks to Ron Coleman at USHMM for helping colate the data to train the model. The model's prediction will determine the likelyhood that something is a target sheet.")
+    st.sidebar.write("This app is run via Streamlit. It is designed for those at the United States Holocaust Memorial Museum. It hosts a binary classification model which is meant to identify target sheets in microfilms. Special thanks to Mike Trizna at the Smithsonian Institution's Data Science Lab for helping me get this app in working order. And special thanks to Ron Coleman at USHMM for helping collate the data to train the model. The model's prediction will determine the likelyhood that something is a target sheet.")
     #download the model
     download_model()
 
