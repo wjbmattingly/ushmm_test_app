@@ -40,7 +40,7 @@ def main():
         if score > .90:
             st.write(f"This is likely a Target Sheet. The model has a {percentage} confidence.")
         else:
-            st.write(f"This is likely NOT a Target Sheet. The model has a {percentage} confidence.")
+            st.write(f"This is likely NOT a Target Sheet. The model has a {100-percentage} confidence.")
 
 def download_model():
     pb_file = "1FLKcLJ_KmvQy7htItH4m7ACPIicBBZaK"
