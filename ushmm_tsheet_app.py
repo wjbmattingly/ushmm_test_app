@@ -23,12 +23,12 @@ def main():
     image = st.file_uploader("", IMAGE_TYPES)
     if image:
         image_data = image.read()
-        with open("data/temp_image.jpg","wb") as f:
+        with open("temp_image.jpg","wb") as f:
             f.write(image_data)
         image_size = (299,299)
 
         st.image(image_data, use_column_width=True)
-        img = keras.preprocessing.image.load_img("data/temp_image.jpg", target_size=image_size)
+        img = keras.preprocessing.image.load_img("temp_image.jpg", target_size=image_size)
 
         img_array = keras.preprocessing.image.img_to_array(img)
         img_array = tf.expand_dims(img_array, 0)  # Create batch axis
