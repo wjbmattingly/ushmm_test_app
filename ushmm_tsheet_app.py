@@ -44,7 +44,7 @@ def main():
             f.write(image_data)
         image_size = (299,299)
 
-        st.image(image_data)
+        st.image(image_data, width=300)
         img = keras.preprocessing.image.load_img("temp_image.jpg", target_size=image_size)
 
         img_array = keras.preprocessing.image.img_to_array(img)
