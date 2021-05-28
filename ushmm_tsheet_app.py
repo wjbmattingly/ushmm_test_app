@@ -35,7 +35,7 @@ def main():
 
         predictions = model.predict(img_array)
         score = predictions[0][0]
-        inv_score = 100-score
+        inv_score = 1-score
         percentage = "{:.2%}".format(score)
         inv_percentage = "{:.2%}".format(inv_score)
         st.write(score)
