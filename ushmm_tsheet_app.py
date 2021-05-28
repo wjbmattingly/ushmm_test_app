@@ -40,12 +40,12 @@ def main():
     #Once the user loads the image, we process it via the the model
     if image:
         image_data = image.read()
-        with open("data/temp_image.jpg","wb") as f:
+        with open("temp_image.jpg","wb") as f:
             f.write(image_data)
         image_size = (299,299)
 
         st.image(image_data)
-        img = keras.preprocessing.image.load_img("data/temp_image.jpg", target_size=image_size)
+        img = keras.preprocessing.image.load_img("temp_image.jpg", target_size=image_size)
 
         img_array = keras.preprocessing.image.img_to_array(img)
         img_array = tf.expand_dims(img_array, 0)  # Create batch axis
