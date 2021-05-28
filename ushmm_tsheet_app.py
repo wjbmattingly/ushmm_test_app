@@ -35,12 +35,14 @@ def main():
 
         predictions = model.predict(img_array)
         score = predictions[0][0]
+        inv_score = 100-score
         percentage = "{:.2%}".format(score)
+        inv_percentage = "{:.2%}".format(inv_score)
         st.write(score)
         if score > .90:
             st.write(f"This is likely a Target Sheet. The model has a {percentage} confidence.")
         else:
-            st.write(f"This is likely NOT a Target Sheet. The model has a {100-percentage} confidence.")
+            st.write(f"This is likely NOT a Target Sheet. The model has a {inv_percentage} confidence.")
 
 def download_model():
     pb_file = "1FLKcLJ_KmvQy7htItH4m7ACPIicBBZaK"
